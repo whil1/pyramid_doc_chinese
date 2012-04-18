@@ -3,19 +3,16 @@
 
 .. _configuration_narr:
 
-Application Configuration 
+应用程序配置 
 =========================
 
-Most people already understand "configuration" as settings that influence the
-operation of an application.  For instance, it's easy to think of the values
-in a ``.ini`` file parsed at application startup time as "configuration".
-However, if you're reasonably open-minded, it's easy to think of *code* as
-configuration too.  Since Pyramid, like most other web application platforms,
-is a *framework*, it calls into code that you write (as opposed to a
-*library*, which is code that exists purely for you to call).  The act of
-plugging application code that you've written into :app:`Pyramid` is also
-referred to within this documentation as "configuration"; you are configuring
-:app:`Pyramid` to call the code that makes up your application.
+众所周知，“配置”一词就是进行一些对应用程序会产生影响的操作。例如我们耳熟能
+详的".ini"文件能在应用程序启动的时候被加载解析出里面的参数，这就是“配置”。
+如果我们能稍微跳出一些过去的思维定势，那么就不难理解，其实*代码*也是一种配置。
+Pyramid像许多其它的WEB应用平台一样，属于是一个*框架*，它会调用你所写的代码来
+完成某些工作（这与*库*的意义刚好相反，*库*只是单纯地被你所写的代码调用。）
+我们将所写的代码放入 :app:`Pyramid` 中，就像是在为它写配置文档一样；说白了，
+其实就是让 :app:`Pyramid` 去主动调用我们所写的代码。
 
 There are two ways to configure a :app:`Pyramid` application:
 :term:`imperative configuration` and :term:`declarative configuration`.  Both
