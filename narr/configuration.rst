@@ -14,21 +14,19 @@ Pyramid像许多其它的WEB应用平台一样，属于是一个*框架*，它�
 我们将所写的代码放入 :app:`Pyramid` 中，就像是在为它写配置文档一样；说白了，
 其实就是让 :app:`Pyramid` 去主动调用我们所写的代码。
 
-There are two ways to configure a :app:`Pyramid` application:
-:term:`imperative configuration` and :term:`declarative configuration`.  Both
-are described below.
+有两种方式去配置一个 :app:`Pyramid` 应用程序::term:`imperative configuration` 
+和 :term:`declarative configuration`. 这两点将在下文叙述。
 
 .. index::
    single: imperative configuration
 
 .. _imperative_configuration:
 
-Imperative Configuration
+命令式配置
 ------------------------
 
-"Imperative configuration" just means configuration done by Python
-statements, one after the next.  Here's one of the simplest :app:`Pyramid`
-applications, configured imperatively:
+"命令式配置" 简单来说就是使用普通的一行一行的Python代码去配置. 以下是个简单的
+:app:`Pyramid`应用程序，使用命令式的配置。
 
 .. code-block:: python
    :linenos:
@@ -47,7 +45,7 @@ applications, configured imperatively:
        server = make_server('0.0.0.0', 8080, app)
        server.serve_forever()
 
-We won't talk much about what this application does yet.  Just note that the
+先不忙着理解这段代码是什么意思。We won't talk much about what this application does yet.  Just note that the
 "configuration' statements take place underneath the ``if __name__ ==
 '__main__':`` stanza in the form of method calls on a :term:`Configurator`
 object (e.g. ``config.add_view(...)``).  These statements take place one
